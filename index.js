@@ -457,7 +457,7 @@ app.put("/todolists/:id", async (req, res) => {
     } else {
         todos.task = req.body.task
         todos.task_description = req.body.task_description
-        users.save()
+        todos.save()
         response = {
             status: "SUCCESS",
             message: "Update Todolist",
